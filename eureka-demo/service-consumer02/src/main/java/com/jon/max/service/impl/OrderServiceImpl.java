@@ -27,20 +27,6 @@ public class OrderServiceImpl implements OrderService {
     }
     //获取服务列表
     private List<Product> selectProductListByLoadBalancerAnnotation(){
-//        StringBuffer sb=null;
-//        List<String> serviceIds=discoveryClient.getServices();
-//        if(CollectionUtils.isEmpty(serviceIds)){
-//            return null;
-//        }
-//        //根据服务名称获取服务
-//        List<ServiceInstance> serviceInstances=discoveryClient.getInstances("service-provider");
-//        if(CollectionUtils.isEmpty(serviceInstances)){
-//            return null;
-//        }
-//        ServiceInstance si=serviceInstances.get(0);
-//        sb=new StringBuffer();
-//        sb.append("http://"+si.getHost()+":"+si.getPort()+"/product/list");
-//        //封装返回数据
         ResponseEntity<List<Product>> response=restTemplate.exchange(
                 "http://service-provider/product/list",
                 HttpMethod.GET,

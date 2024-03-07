@@ -18,6 +18,7 @@
         <module>service-consumer</module>
         <module>service-consumer01</module>
         <module>service-consumer02</module>
+        <module>javase</module>
     </modules>
     <!--  继承spring-boot-starter-parent依赖  -->
     <!--  使用继承方式，实现复用，符合继承的都可以被使用  -->
